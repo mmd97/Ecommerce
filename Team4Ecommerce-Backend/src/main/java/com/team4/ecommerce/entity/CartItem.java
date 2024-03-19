@@ -3,10 +3,8 @@ package com.team4.ecommerce.entity;
 
 import com.team4.ecommerce.entity.product.Product;
 import jakarta.persistence.*;
-import javax.validation.constraints.Pattern;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+import jakarta.validation.constraints.Size;
+
 
 @Entity
 @Table(name = "cart_items")

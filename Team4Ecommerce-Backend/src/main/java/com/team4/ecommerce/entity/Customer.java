@@ -2,12 +2,12 @@ package com.team4.ecommerce.entity;
 
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
 
 import java.util.Date;
-import javax.validation.constraints.Pattern;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "customers")
@@ -19,7 +19,7 @@ public class Customer extends AddressWithCountry {
 
 	@Column(nullable = false, length = 64)
 	@NotEmpty
-	@Pattern(regexp = ".*[!@#$%^&*()_+={}[:;<>?~-]+.*")
+	@Pattern(regexp = ".*[!@#$%^&*()_+={}[:;<>?~-]+.")
 	@Size(min=8)
 	private String password;
 	
